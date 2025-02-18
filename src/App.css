@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap');
+@import "tailwindcss";
+
 #root {
   font-family: "Signika Negative", system-ui, Avenir, Helvetica, Arial, sans-serif;
   max-width: 1280px;
@@ -7,3 +8,34 @@
   text-align: center;
 }
 
+.todo-button {
+  background-image: url('/images/cool-background(1).png');
+  background-size: cover; 
+  background-position: center;
+  color: white;  
+  padding: 10px 20px; 
+  border-radius: 0.375rem; 
+  border: none;  
+  margin-bottom: 5px;
+  margin-right: 20px;
+}
+.checked-button {
+  background-image: url('/images/cool-background.png');
+  background-size: cover; 
+  background-position: center;
+  color: white;  
+  padding: 10px 20px; 
+  border-radius: 0.375rem; 
+  border: none;  
+  margin-bottom: 5px;
+  margin-right: 20px;
+}
+@media screen and (max-width: 768px){
+  .todo-button{
+   max-width: 200px;
+    font-size: xx-small;
+    overflow-x: scroll;
+    word-wrap: break-word;
+    white-space: normal; /* Ensures text breaks if needed */
+  }
+}
