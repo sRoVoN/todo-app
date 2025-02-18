@@ -11,7 +11,6 @@ function App() {
   useEffect(() => {
     const data = localStorage.getItem("todos");
     if (data !== null) setTodos(JSON.parse(data));
-    console.log(data, "data");
   }, []);
   useEffect(() => {
     if (todos.length > 0) {
@@ -21,8 +20,6 @@ function App() {
 
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("add");
-    console.log(todo, "todo");
     if (todo)
       setTodos((prevTdos) => [
         ...prevTdos,
@@ -34,7 +31,6 @@ function App() {
 
     if (todos) {
       const remainList = todos.filter((todo) => todo.id !== id);
-      console.log(remainList);
       setTodos(remainList);
     }
   };
